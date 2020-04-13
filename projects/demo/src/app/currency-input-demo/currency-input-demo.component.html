@@ -1,0 +1,22 @@
+<h3>Reactive Form</h3>
+<p>currency-input-demo works!</p>
+<form name="reactiveForm" role="form" novalidate [formGroup]="form">
+    <div>
+        <input ecoCurrencyInput formControlName="value1" type="number" step="1" [smallestUnitPerUnit]="1"> {{form.get('value1').value}}
+    </div>
+    <div>
+        <input ecoCurrencyInput formControlName="value2" type="number" step="0.01"> {{form.get('value2').value}}
+    </div>
+    <div>
+        <input ecoCurrencyInput formControlName="value3" type="number" step="0.01"> {{form.get('value3').value}}
+    </div>
+</form>
+<div>
+    <input ecoCurrencyInput [(ngModel)]="value1" type="number" step="0.01" [smallestUnitPerUnit]="1">{{value1}}
+</div>
+<div>
+    <input ecoCurrencyInput [(ngModel)]="value2" type="number" step="0.01">{{value2}}
+</div>
+<div>
+    <input ecoCurrencyInput [(ngModel)]="value3" type="number" step="0.01">{{value3}}
+</div>
